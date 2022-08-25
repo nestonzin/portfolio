@@ -1,16 +1,20 @@
 import { useState } from "react";
-import { Hero } from "./components/Hero";
-import { NavBar } from "./components/NavBar/NavBar";
-import { DefaultLayout } from "./_layouts/default";
+
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Home } from "./pages/home";
+import { Projects } from "./pages/projects";
 
 function App() {
   const [count, setCount] = useState(0);
 
   return (
     <div className="App">
-      <DefaultLayout>
-        <Hero />
-      </DefaultLayout>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/Projects" element={<Projects />} />
+        </Routes>
+      </Router>
     </div>
   );
 }

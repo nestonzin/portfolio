@@ -1,6 +1,7 @@
 import { Flex, Text, Box, Link, Image, Button } from "@chakra-ui/react";
 import giftest from "../../assets/giftest.gif";
-import { NavBar } from "../NavBar/NavBar";
+import { NavLink } from "react-router-dom";
+
 
 export const Hero = () => {
   return (
@@ -39,7 +40,10 @@ export const Hero = () => {
           to create beautiful and performant products with delightful user
           experiences.
         </Text>
-        <Button color="black">Meus Projetos</Button>
+
+        <NavLink to="/projects">
+          <Button color="black">Meus Projetos</Button>
+        </NavLink>
       </Flex>
 
       <Image src={giftest} maxWidth={["15rem", "15rem", "25rem", "35rem"]} />
