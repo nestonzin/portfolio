@@ -15,7 +15,7 @@ export const DefaultLayout = ({ children } : DefaultLayoutProps) => {
       minH="100vh"
       w="100%"
 
-      overflow={["hidden"]}
+      
     >
       <NavBar />
       { children }
