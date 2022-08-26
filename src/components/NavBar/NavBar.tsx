@@ -22,7 +22,6 @@ export const NavBar = () => {
         <NavLink to="/AboutMe">
           <Link color="white">Tentang</Link>
         </NavLink>
-        <Link color="white">Projetos</Link>
       </Flex>
     </Flex>
   );
