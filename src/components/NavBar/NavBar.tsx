@@ -19,7 +19,9 @@ export const NavBar = () => {
         />
       </NavLink>
       <Flex gap="1rem">
-        <Link color="white">Tentang</Link>
+        <NavLink to="/AboutMe">
+          <Link color="white">Tentang</Link>
+        </NavLink>
         <Link color="white">Projetos</Link>
       </Flex>
     </Flex>

@@ -12,14 +12,14 @@ export const Card = () => {
     <Flex
       padding={["2rem"]}
       gap="3rem"
-      flexDirection={["column", "column", "row", "row"]}
+      flexDirection={["column", "column", "column", "row"]}
       alignItems={"center"}
     >
       {cards.map((card) => (
         <Flex
           w={["15rem"]}
           h={["20rem"]}
-          bg="blue"
+          bg="#121212"
           justifyContent={["center"]}
           p={["1rem"]}
           flexDirection={["column"]}
