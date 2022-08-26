@@ -11,11 +11,10 @@ export const Card = () => {
   return (
     <Flex
       padding={["2rem"]}
-      gap="1rem"
-      flexDirection={["column", "column", "column", "column"]}
+      gap="3rem"
+      flexDirection={["column", "column", "row", "row"]}
       alignItems={"center"}
     >
-      {" "}
       {cards.map((card) => (
         <Flex
           w={["15rem"]}
