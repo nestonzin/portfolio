@@ -30,13 +30,17 @@ export const Card = () => {
         >
           <Box
             w={["10rem"]}
-            h={["5rem"]}
+            h={["8rem"]}
             bg="yellow"
             borderRadius={[".5rem"]}
           ></Box>
-          <Text color={["black"]}></Text>
-          <Text color={["black"]} textAlign={["center"]}></Text>
-          <Button w="5rem" h="2.5rem"></Button>
+          <Text color={["black"]}>{card.title}</Text>
+          <Text color={["black"]} textAlign={["center"]}>
+            {card.description}
+          </Text>
+          <Button w="5rem" h="2.5rem">
+            {card.cta}
+          </Button>
         </Flex>
       ))}
     </Flex>
