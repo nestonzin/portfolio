@@ -11,22 +11,22 @@ export const Infos = () => {
     {
       title: "HTML",
       level: "middle",
-      img: { html },
+      img: html,
     },
     {
       title: "CSS",
       level: "middle",
-      img: { css },
+      img: css,
     },
     {
       title: "JS",
       level: "middle",
-      img: { js },
+      img: js,
     },
     {
       title: "React",
       level: "middle",
-      img: { obj },
+      img: obj,
     },
   ];
 
@@ -39,7 +39,7 @@ export const Infos = () => {
     >
       {skills.map((skill) => (
         <Flex flexDirection={["column"]} alignItems={["center"]}>
-          <Image>{}</Image>
+          <Image src={skill.img}/>
           <Text color={["white"]} fontSize={["2rem"]}>{skill.title}</Text>
           <Text color={["white"]} fontSize={["1rem"]}>{skill.level}</Text>
         </Flex>
