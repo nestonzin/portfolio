@@ -9,7 +9,7 @@ export const Card = () => {
   ];
 
   return (
-    <Flexg
+    <Flex
       padding={["2rem"]}
       gap="1rem"
       flexDirection={["column", "column", "column", "column"]}
