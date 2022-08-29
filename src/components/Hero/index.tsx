@@ -2,7 +2,6 @@ import { Flex, Text, Box, Link, Image, Button } from "@chakra-ui/react";
 import giftest from "../../assets/giftest.gif";
 import { NavLink } from "react-router-dom";
 
-
 export const Hero = () => {
   return (
     <Flex
@@ -18,8 +17,7 @@ export const Hero = () => {
         gap={["1rem"]}
         alignItems={["center"]}
         color="white"
-        marginInline={[".5rem"]}
-        w={["30rem"]}
+        paddingInline={["2rem"]}
       >
         <Text
           color="#ffff"
