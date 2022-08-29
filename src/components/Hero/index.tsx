@@ -33,6 +33,7 @@ export const Hero = () => {
           fontSize={[".6rem", ".9rem", ".9rem", ".9rem"]}
           fontWeight="400"
           paddingInline={["2rem"]}
+          w="20rem"
         >
           Hi, I'm Nestor. My interests are in front end engineering, and i love
           to create beautiful and performant products with delightful user
