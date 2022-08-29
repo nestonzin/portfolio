@@ -7,8 +7,7 @@ export const NavBar = () => {
     <Flex
       justifyContent="space-between"
       alignItems="center"
-      paddingInline="2rem"
-      paddingBlock="1rem"
+      p={["2rem"]}
     >
       <NavLink to="/">
         <Image
