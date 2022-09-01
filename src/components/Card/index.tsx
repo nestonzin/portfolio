@@ -13,6 +13,17 @@ import {
   useDisclosure,
 } from "@chakra-ui/react";
 import links from "../../assets/links.png";
+import glaucopage from "../../assets/glaucopage.png";
+import waterwork from "../../assets/waterwork.png";
+import NLW from "../../assets/NLW.png";
+import { useState } from "react";
+
+interface ICard {
+  image: string;
+  title: string;
+  description: string;
+  cta: string;
+}
 
 export const Card = () => {
   const cards = [
@@ -23,11 +34,37 @@ export const Card = () => {
         "Projeto feito em Html, CSS e JS onde eu crio uma tela responsiva com links das minhas redes sociais",
       cta: "Veja mais",
     },
-    { image: "", title: "Title", description: "description", cta: "Veja mais" },
-    { image: "", title: "Title", description: "description", cta: "Veja mais" },
-    { image: "", title: "Title", description: "description", cta: "Veja mais" },
+    {
+      image: NLW,
+      title: "Next Leve Week",
+      description:
+        "Projeto feito na Rocketseat onde eu crio uma landing page responsiva em HTML/CSS/JS",
+      cta: "Veja mais",
+    },
+    {
+      image: waterwork,
+      title: "WaterWorks",
+      description:
+        "Primeira tela feita em HTML/CSS desenvolvida completamente sozinho",
+      cta: "Veja mais",
+    },
+    {
+      image: glaucopage,
+      title: "glauco.psi",
+      description: "Pagina criada em HTML/CSS/JS feita para um amigo psicologo",
+      cta: "Veja mais",
+    },
   ];
   const { isOpen, onOpen, onClose } = useDisclosure();
+
+  const [currentCard, setCurrentCard] = useState<ICard>();
+
+  function handleClick(cardSelected: ICard) {
+    const cardOpen = cards.find((card) => card.title === cardSelected.title);
+    setCurrentCard(cardOpen);
+
+    onOpen();
+  }
 
   return (
     <Flex
@@ -53,16 +90,21 @@ export const Card = () => {
           <Text color={["black"]} textAlign={["center"]} fontSize=".6rem">
             {card.description}
           </Text>
-          <Button onClick={onOpen}>Veja mais</Button>
+          <Button onClick={() => handleClick(card)}>Veja mais</Button>
 
           <Modal onClose={onClose} isOpen={isOpen} isCentered>
             <ModalOverlay />
             <ModalContent>
-              <ModalHeader>{card.title}</ModalHeader>
+              <ModalHeader alignSelf={["center"]}>
+                {currentCard?.title}
+              </ModalHeader>
               <ModalCloseButton />
-              <ModalBody> teste</ModalBody>
+              <ModalBody>
+                <Image src={currentCard?.image} />
+                <Text textAlign={["center"]}>{currentCard?.description}</Text>
+              </ModalBody>
               <ModalFooter>
-                <Button onClick={onClose}>Close</Button>
+                <Button onClick={onClose}>Fechar</Button>
               </ModalFooter>
             </ModalContent>
           </Modal>

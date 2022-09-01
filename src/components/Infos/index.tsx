@@ -3,7 +3,7 @@ import giftest from "../../assets/giftest.gif";
 import html from "../../assets/html.png";
 import css from "../../assets/css.png";
 import js from "../../assets/js.png";
-import obj from "../../assets/obj.png";
+import react from "../../assets/react.png";
 import array from "../../assets/array.png";
 
 export const Infos = () => {
@@ -26,7 +26,7 @@ export const Infos = () => {
     {
       title: "React",
       level: "novice",
-      img: obj,
+      img: react,
     },
   ];
 
@@ -103,7 +103,7 @@ export const Infos = () => {
             w="10rem"
             h="10rem"
           >
-            <Image src={sideSkill.img} />
+            <Image src={sideSkill.img} maxW=""  />
             <Text color={["white"]} fontSize={["2rem"]}>
               {sideSkill.title}
             </Text>
