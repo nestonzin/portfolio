@@ -3,8 +3,12 @@ import giftest from "../../assets/giftest.gif";
 import html from "../../assets/html.png";
 import css from "../../assets/css.png";
 import js from "../../assets/js.png";
-import react from "../../assets/react.png";
+import obj from "../../assets/obj.png";
 import array from "../../assets/array.png";
+import figma from "../../assets/figma.png";
+import psd from "../../assets/psd.png";
+import ai from "../../assets/ai.png";
+import react from "../../assets/react.png";
 
 export const Infos = () => {
   const skills = [
@@ -34,17 +38,17 @@ export const Infos = () => {
     {
       title: "PSD",
       level: "novice",
-      img: "!",
+      img: psd,
     },
     {
       title: "Ilustrator",
       level: "novice",
-      img: "!",
+      img: ai,
     },
     {
       title: "Figma",
       level: "middle",
-      img: "!",
+      img: figma,
     },
   ];
 
@@ -75,7 +79,7 @@ export const Infos = () => {
             w="10rem"
             h="10rem"
           >
-            <Image src={skill.img} />
+            <Image src={skill.img} maxW={["3rem"]} w="100% " />
             <Text color={["white"]} fontSize={["2rem"]}>
               {skill.title}
             </Text>
@@ -103,7 +107,7 @@ export const Infos = () => {
             w="10rem"
             h="10rem"
           >
-            <Image src={sideSkill.img} maxW=""  />
+            <Image src={sideSkill.img} maxWidth={["3rem"]} w="100%" />
             <Text color={["white"]} fontSize={["2rem"]}>
               {sideSkill.title}
             </Text>
