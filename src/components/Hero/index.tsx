@@ -41,7 +41,7 @@ export const Hero = () => {
         </Text>
 
         <NavLink to="/projects">
-          <Button color="black">Meus Projetos</Button>
+          <Button color="black">Projects</Button>
         </NavLink>
       </Flex>
 

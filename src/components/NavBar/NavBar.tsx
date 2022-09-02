@@ -19,7 +19,8 @@ export const NavBar = () => {
       </NavLink>
       <Flex gap="1rem">
         <NavLink to="/AboutMe">
-          <Link color="white">Tentang</Link>
+          <Link color="white" fontWeight={["bold"]} border={["1px solid #fff"]} p={[".5rem"]}
+          borderRadius={["1rem"]} >Skills</Link>
         </NavLink>
       </Flex>
     </Flex>

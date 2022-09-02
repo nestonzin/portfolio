@@ -90,7 +90,7 @@ export const Card = () => {
           <Text color={["black"]} textAlign={["center"]} fontSize=".6rem">
             {card.description}
           </Text>
-          <Button onClick={() => handleClick(card)}>Veja mais</Button>
+          <Button onClick={() => handleClick(card)}>See more</Button>
 
           <Modal onClose={onClose} isOpen={isOpen} isCentered>
             <ModalOverlay />
