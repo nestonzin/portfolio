@@ -9,7 +9,7 @@ import figma from "../../assets/figma.png";
 import psd from "../../assets/psd.png";
 import ai from "../../assets/ai.png";
 import react from "../../assets/react.png";
-import adobexd from "../../assets/adobexd.png";
+import github from "../../assets/github.png";
 
 export const Infos = () => {
   const skills = [
@@ -52,9 +52,9 @@ export const Infos = () => {
       img: figma,
     },
     {
-      title: "Adobe XD",
+      title: "Github",
       level: "novice",
-      img: adobexd,
+      img: github,
     },
   ];
 

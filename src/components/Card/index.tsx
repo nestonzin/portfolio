@@ -11,11 +11,16 @@ import {
   ModalBody,
   ModalCloseButton,
   useDisclosure,
+  Icon,
 } from "@chakra-ui/react";
 import links from "../../assets/links.png";
 import glaucopage from "../../assets/glaucopage.png";
 import waterwork from "../../assets/waterwork.png";
 import NLW from "../../assets/NLW.png";
+import html from "../../assets/html.png";
+import css from "../../assets/css.png";
+import js from "../../assets/js.png";
+
 import { useState } from "react";
 
 interface ICard {
@@ -23,6 +28,7 @@ interface ICard {
   title: string;
   description: string;
   cta: string;
+  techIcons: string[];
 }
 
 export const Card = () => {
@@ -30,6 +36,7 @@ export const Card = () => {
     {
       image: links,
       title: "MyLinks",
+      techIcons: [html, css, js],
       description:
         "Projeto feito em Html, CSS e JS onde eu crio uma tela responsiva com links das minhas redes sociais",
       cta: "Veja mais",
@@ -37,6 +44,7 @@ export const Card = () => {
     {
       image: NLW,
       title: "Next Leve Week",
+      techIcons: [html, css, js],
       description:
         "Projeto feito na Rocketseat onde eu crio uma landing page responsiva em HTML/CSS/JS",
       cta: "Veja mais",
@@ -44,6 +52,7 @@ export const Card = () => {
     {
       image: waterwork,
       title: "WaterWorks",
+      techIcons: [html, css, js],
       description:
         "Primeira tela feita em HTML/CSS desenvolvida completamente sozinho",
       cta: "Veja mais",
@@ -51,6 +60,7 @@ export const Card = () => {
     {
       image: glaucopage,
       title: "glauco.psi",
+      techIcons: [html, css, js],
       description: "Pagina criada em HTML/CSS/JS feita para um amigo psicologo",
       cta: "Veja mais",
     },
@@ -87,10 +97,21 @@ export const Card = () => {
         >
           <Image src={card.image} maxWidth={["10rem"]}></Image>
           <Text color={["black"]}>{card.title}</Text>
+          <Flex gap={["1rem"]}>
+            {card.techIcons?.map((techIcon) => (
+              <Image src={techIcon} maxWidth={["1rem"]} />
+            ))}
+          </Flex>
           <Text color={["black"]} textAlign={["center"]} fontSize=".6rem">
             {card.description}
           </Text>
-          <Button onClick={() => handleClick(card)}>See more</Button>
+          <Button
+            onClick={() => handleClick(card)}
+            bg="#e3ebff"
+            boxShadow="2xl"
+          >
+            See more
+          </Button>
 
           <Modal onClose={onClose} isOpen={isOpen} isCentered>
             <ModalOverlay />
