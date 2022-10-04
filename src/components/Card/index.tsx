@@ -37,8 +37,7 @@ export const Card = () => {
       image: links,
       title: "MyLinks",
       techIcons: [html, css, js],
-      description:
-        "Projeto feito em Html, CSS e JS onde eu crio uma tela responsiva com links das minhas redes sociais",
+      description: "developed to fix flexbox css concepts",
       cta: "Veja mais",
     },
     {
@@ -46,22 +45,21 @@ export const Card = () => {
       title: "Next Leve Week",
       techIcons: [html, css, js],
       description:
-        "Projeto feito na Rocketseat onde eu crio uma landing page responsiva em HTML/CSS/JS",
+        "project developed at the Rocketseat online event using JavaScript and flexbox concepts",
       cta: "Veja mais",
     },
     {
       image: waterwork,
       title: "WaterWorks",
       techIcons: [html, css, js],
-      description:
-        "Primeira tela feita em HTML/CSS desenvolvida completamente sozinho",
+      description: "first project developed in html/css",
       cta: "Veja mais",
     },
     {
       image: glaucopage,
       title: "glauco.psi",
       techIcons: [html, css, js],
-      description: "Pagina criada em HTML/CSS/JS feita para um amigo psicologo",
+      description: "undefined",
       cta: "Veja mais",
     },
   ];
@@ -82,11 +80,12 @@ export const Card = () => {
       gap="3rem"
       flexDirection={["column", "column", "column", "row"]}
       alignItems={"center"}
+      justifyContent={["center"]}
     >
       {cards.map((card) => (
         <Flex
           w={["12rem"]}
-          h={["18rem"]}
+          h={["20rem"]}
           bg="#fff"
           justifyContent={["center"]}
           p={["1rem"]}
@@ -95,7 +94,7 @@ export const Card = () => {
           gap={[".5rem"]}
           borderRadius={["1rem"]}
         >
-          <Image src={card.image} maxWidth={["10rem"]}></Image>
+          <Image src={card.image} maxWidth={["10rem"]} />
           <Text color={["black"]}>{card.title}</Text>
           <Flex gap={["1rem"]}>
             {card.techIcons?.map((techIcon) => (
@@ -105,11 +104,7 @@ export const Card = () => {
           <Text color={["black"]} textAlign={["center"]} fontSize=".6rem">
             {card.description}
           </Text>
-          <Button
-            onClick={() => handleClick(card)}
-            bg="#e3ebff"
-            boxShadow="2xl"
-          >
+          <Button onClick={() => handleClick(card)} boxShadow="xl">
             See more
           </Button>
 
@@ -122,7 +117,9 @@ export const Card = () => {
               <ModalCloseButton />
               <ModalBody>
                 <Image src={currentCard?.image} />
-                <Text textAlign={["center"]}>{currentCard?.description}</Text>
+                <Text textAlign={["center"]} p={["1rem"]}>
+                  {currentCard?.description}
+                </Text>
               </ModalBody>
               <ModalFooter>
                 <Button onClick={onClose}>Fechar</Button>
