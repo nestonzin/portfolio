@@ -1,6 +1,7 @@
 import { Flex, Text, Box, Link, Image, Button } from "@chakra-ui/react";
 import giftest from "../../assets/giftest.gif";
 import { NavLink } from "react-router-dom";
+import { SocialLinks } from "../Social-links";
 
 export const Hero = () => {
   return (
@@ -43,6 +44,7 @@ export const Hero = () => {
         <NavLink to="/projects">
           <Button color="black">Projects</Button>
         </NavLink>
+        <SocialLinks />
       </Flex>
 
       <Image src={giftest} maxWidth={["15rem", "15rem", "25rem", "35rem"]} />
