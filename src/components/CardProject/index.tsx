@@ -31,7 +31,7 @@ interface ICard {
   techIcons: string[];
 }
 
-export const Card = () => {
+export const CardProject = () => {
   const cards = [
     {
       image: links,
