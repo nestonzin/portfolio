@@ -10,7 +10,7 @@ export const Hero = () => {
       justifyContent={["center", "center", "center", "space-around"]}
       alignItems={["center"]}
       w="100%"
-      h="95vh"
+      h="80vh"
       gap={["1rem"]}
     >
       <Flex

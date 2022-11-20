@@ -12,6 +12,7 @@ import {
   ModalCloseButton,
   useDisclosure,
   Icon,
+  Link,
 } from "@chakra-ui/react";
 import links from "../../assets/links.png";
 import glaucopage from "../../assets/glaucopage.png";
@@ -27,6 +28,8 @@ interface ICard {
   image: string;
   title: string;
   description: string;
+  github: string;
+  link: string;
   cta: string;
   techIcons: string[];
 }
@@ -38,6 +41,8 @@ export const CardProject = () => {
       title: "MyLinks",
       techIcons: [html, css, js],
       description: "developed to fix flexbox css concepts",
+      github: "https://github.com/nestonzin/Nestor---Links",
+      link: "https://nestor-links.vercel.app",
       cta: "Veja mais",
     },
     {
@@ -46,6 +51,9 @@ export const CardProject = () => {
       techIcons: [html, css, js],
       description:
         "project developed at the Rocketseat online event using JavaScript and flexbox concepts",
+      github: "https://github.com/nestonzin/Nestor---Links",
+      link: "https://nestor-links.vercel.app",
+
       cta: "Veja mais",
     },
     {
@@ -53,6 +61,9 @@ export const CardProject = () => {
       title: "WaterWorks",
       techIcons: [html, css, js],
       description: "first project developed in html/css",
+      github: "https://github.com/nestonzin/Nestor---Links",
+      link: "https://nestor-links.vercel.app",
+
       cta: "Veja mais",
     },
     {
@@ -60,6 +71,8 @@ export const CardProject = () => {
       title: "glauco.psi",
       techIcons: [html, css, js],
       description: "undefined",
+      github: "https://github.com/nestonzin/Nestor---Links",
+      link: "https://nestor-links.vercel.app",
       cta: "Veja mais",
     },
   ];
@@ -115,14 +128,29 @@ export const CardProject = () => {
                 {currentCard?.title}
               </ModalHeader>
               <ModalCloseButton />
-              <ModalBody>
+              <ModalBody
+                display="flex"
+                flexDirection="column"
+                alignItems="center"
+                gap="1rem"
+              >
                 <Image src={currentCard?.image} />
+                <Button>
+                  <Link href={currentCard?.github} isExternal>
+                    GitHub
+                  </Link>
+                </Button>
+                <Button>
+                  <Link href={currentCard?.link} isExternal>
+                    Link
+                  </Link>
+                </Button>
                 <Text textAlign={["center"]} p={["1rem"]}>
                   {currentCard?.description}
                 </Text>
               </ModalBody>
               <ModalFooter>
-                <Button onClick={onClose}>Fechar</Button>
+                <Button onClick={onClose}>Close</Button>
               </ModalFooter>
             </ModalContent>
           </Modal>
